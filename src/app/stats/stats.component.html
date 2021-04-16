@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table table-secondary">
+      <thead>
+        <th scope="col">Stat</th>
+        <th scope="col">Base</th>
+        <th scope="col">Temporary Mod</th>
+        <th scope="col">Bonus</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stat of allStats()">
+          <th scope="row">{{ stat.name }}</th>
+          <td>{{ stat.base }}</td>
+          <td>{{ stat.getTempMod() }}</td>
+          <td>{{ stat.modifier() }}</td>
+        </tr>
+      </tbody>
+    </table></div>
+</div>
