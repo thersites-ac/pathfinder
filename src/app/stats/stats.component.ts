@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Character } from '../character.model';
-import { Stat } from './stat.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { Stat } from '../model/stat.model';
 
 @Component({
   selector: 'app-stats',
@@ -9,28 +8,37 @@ import { Stat } from './stat.model';
 })
 export class StatsComponent implements OnInit {
 
-  base: Character = { str: 9, dex: 15, con: 12, wis: 10, int: 18, cha: 14 };
-
+  @Input()
   str: Stat;
+
+  @Input()
   dex: Stat;
+
+  @Input()
   con: Stat;
+
+  @Input()
   wis: Stat;
+
+  @Input()
   int: Stat;
+
+  @Input()
   cha: Stat;
+
+  ngOnInit() {
+  }
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.str = new Stat('STR', this.base.str);
-    this.dex = new Stat('DEX', this.base.dex);
-    this.con = new Stat('CON', this.base.con);
-    this.wis = new Stat('WIS', this.base.wis);
-    this.int = new Stat('INT', this.base.int);
-    this.cha = new Stat('CHA', this.base.cha);
-  }
-
   allStats(): Stat[] {
-    return [this.str, this.dex, this.con, this.wis, this.int, this.cha];
+    return [ this.str
+           , this.dex
+           , this.con
+           , this.wis
+           , this.int
+           , this.cha
+           ];
   }
 
 }

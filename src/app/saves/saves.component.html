@@ -10,29 +10,13 @@
         <th scope="col">Total</th>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">FORTITUDE</th>
-          <td>3</td>
-          <td>-1</td>
-          <td>-</td>
-          <td>-</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <th scope="row">REFLEX</th>
-          <td>5</td>
-          <td>+2</td>
-          <td>-</td>
-          <td>-</td>
-          <td>7</td>
-        </tr>
-        <tr>
-          <th scope="row">WILL</th>
-          <td>5</td>
-          <td>0</td>
-          <td>+2</td>
-          <td>-</td>
-          <td>7</td>
+        <tr *ngFor="let save of allSaves()">
+          <th scope="row">{{ save.name }}</th>
+          <td>{{ save.classBase }}</td>
+          <td>{{ save.statsBonus() }}</td>
+          <td>{{ save.bonus }}</td>
+          <td>{{ save.tmpMod }}</td>
+          <td>{{ save.modifier() }}</td>
         </tr>
       </tbody>
     </table>

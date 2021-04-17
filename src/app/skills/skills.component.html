@@ -1,1 +1,3 @@
-<app-skill></app-skill>
+<ul>
+  <li *ngFor="let skill of skills">{{ skill.name }} ({{ skill.stat.name }}): {{skill.modifier()}}</li>
+</ul>

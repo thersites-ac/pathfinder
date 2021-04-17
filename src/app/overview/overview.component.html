@@ -1,12 +1,20 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-6">
-      <app-stats></app-stats>
-      <app-saves></app-saves>
-      <app-background></app-background>
+      <app-stats 
+        [(str)]="character.str"
+        [(dex)]="character.dex"
+        [(con)]="character.con"
+        [(wis)]="character.wis"
+        [(int)]="character.int"
+        [(cha)]="character.cha"></app-stats>
+      <app-saves 
+        [(fort)]="character.fort"
+        [(refl)]="character.refl"
+        [(will)]="character.will"></app-saves>
     </div>
     <div class="col-6">
-      <app-skills></app-skills>
+      <app-skills [(skills)]="character.skills"></app-skills>
     </div>
   </div>
 </div>

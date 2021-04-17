@@ -11,7 +11,7 @@
         <tr *ngFor="let stat of allStats()">
           <th scope="row">{{ stat.name }}</th>
           <td>{{ stat.base }}</td>
-          <td>{{ stat.getTempMod() }}</td>
+          <td>{{ stat.tmpMod }}</td>
           <td>{{ stat.modifier() }}</td>
         </tr>
       </tbody>

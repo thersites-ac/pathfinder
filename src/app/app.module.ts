@@ -7,8 +7,6 @@ import { StatsComponent } from './stats/stats.component';
 import { OverviewComponent } from './overview/overview.component';
 import { SavesComponent } from './saves/saves.component';
 import { SkillsComponent } from './skills/skills.component';
-import { BackgroundComponent } from './background/background.component';
-import { SkillComponent } from './skills/skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +15,7 @@ import { SkillComponent } from './skills/skill/skill.component';
     StatsComponent,
     OverviewComponent,
     SavesComponent,
-    SkillsComponent,
-    BackgroundComponent,
-    SkillComponent
+    SkillsComponent
   ],
   imports: [
     BrowserModule

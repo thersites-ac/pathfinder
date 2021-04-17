@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Save } from '../model/save.model';
 
 @Component({
   selector: 'app-saves',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SavesComponent implements OnInit {
 
+  @Input()
+  fort: Save;
+
+  @Input()
+  refl: Save;
+
+  @Input()
+  will: Save;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  allSaves(): Save[] {
+    return [this.fort, this.refl, this.will];
   }
 
 }
