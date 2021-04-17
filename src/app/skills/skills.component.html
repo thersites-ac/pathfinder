@@ -1,3 +1,15 @@
-<ul>
-  <li *ngFor="let skill of skills">{{ skill.name }} ({{ skill.stat.name }}): {{skill.modifier()}}</li>
-</ul>
+<div class="card" *ngFor="let skill of skills">
+  <div class="card-header"><strong>{{ skill.name }}</strong> ({{ skill.stat.name }})</div>
+  <div class="card-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <h5 class="card-title">{{ skill.modifier() }}</h5>
+        </div>
+        <div class="col-8 text-right">
+          <em>= {{ skill.points }} (points) + {{ skill.bonus }} (bonus) + {{ skill.stat.modifier()}} (base stat)</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
